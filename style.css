@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ddeeff;
+  font-family: "Lucida Grande", verdana, sans-serif;
+}
+.projects {
+  background-image: url(https://unsplash.it/300/300);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.projects li {
+  border: 3px solid blue;
+  margin: 10px;
+  padding: 10px;
+  width: 12rem;
+  height: 12rem;
+  display: inline-block;
+}
+.projects ol {
+  list-style: none;
+}
