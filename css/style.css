@@ -98,7 +98,7 @@ aside {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
+}
 
 /* style overrides for wider screen layouts */
 @media screen and (min-width: 900px) {
