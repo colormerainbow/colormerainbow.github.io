@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125 rem;
+  font-family: "Lucida Grande", verdana, sans-serif;
+}
+header,
+main,
+aside,
+footer {
+  padding: 1rem;
+}
+header, footer {
+  background: #555b6e;
+  color: #bee3db;
+}
+main, .intro {
+  background: #faf9f9;
+  background-image: url(../images/hypnotize.png);
+}
+.projects, .labs {
+  background: #89b0ae;
+}
+aside {
+  background: #ffd6ba;
+  
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  padding: 1rem 0 0 1rem;
+}
+.intro h2, aside h2 {
+  padding: 0;
+}
+/* use flexbox to style the contents inside projects and labs boxes */
+li {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #bee3db;
+}
+.projects li, .labs li{
+  background: #bee3db;
+}
+ol {
+  list-style: none;
+  margin: 0rem;
+  padding: .5rem;
+}
+h4 {
+  font-size: .8rem;
+  font-style: italic;
+}
+.duedate {
+  font-size: .8rem;
+  font-style: italic;
+  border: 2px solid black;
+}
+/* end basic mobile-first styling */
+
+/* style overrides for medium screen layouts */
+@media screen and (min-width: 600px) {
+body {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: repeat (12, 1fr);
+  grid-template-rows: auto;
+  padding-bottom: 0;
+}
+h1 {
+  text-align: left;
+}
+.intro p, .intro h2{
+  padding: 0 0 0 1rem;
+}
+header, footer {
+  grid-column: 1 / span 12;
+}
+main {
+  grid-column: 1 / span 9;
+}
+aside {
+  grid-column: 1/ span 9;
+}
+/* use css grid to style the layout of the project and lab links */
+.projects ol{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.labs ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* style overrides for wider screen layouts */
+@media screen and (min-width: 900px) {
+aside {
+  grid-column: 10 / span 3;
+}
+}
