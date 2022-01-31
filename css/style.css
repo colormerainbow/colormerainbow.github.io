@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 1.125 rem;
+  font-size: 1.2rem;
   font-family: "Lucida Grande", verdana, sans-serif;
 }
 header,
@@ -26,19 +26,13 @@ main, .intro {
 }
 aside {
   background: #ffd6ba;
-  
 }
-h1 {
+h1, h2 {
   text-align: center;
-}
-h2 {
-  padding: 1rem 0 0 1rem;
-}
-.intro h2, aside h2 {
-  padding: 0;
+  padding: .5rem 0 0 0;
 }
 /* use flexbox to style the contents inside projects and labs boxes */
-li {
+.projects li, .labs li {
   margin: 5px;
   padding: 5px;
   display: flex;
@@ -46,23 +40,16 @@ li {
   justify-content: flex-start;
   background: #bee3db;
 }
-.projects li, .labs li{
-  background: #bee3db;
-}
 ol {
   list-style: none;
   margin: 0rem;
   padding: .5rem;
 }
-h4 {
+ol h4 {
   font-size: .8rem;
   font-style: italic;
 }
-.duedate {
-  font-size: .8rem;
-  font-style: italic;
-  border: 2px solid black;
-}
+
 /* end basic mobile-first styling */
 
 /* style overrides for medium screen layouts */
@@ -71,13 +58,20 @@ body {
   font-size: 1rem;
   display: grid;
   grid-template-columns: repeat (12, 1fr);
-  grid-template-rows: auto;
-  padding-bottom: 0;
 }
-h1 {
+h1, .intro h2 {
   text-align: left;
+  padding: 0 0 0 1rem;
 }
-.intro p, .intro h2{
+.projects h2, .labs h2 {
+  padding: 1rem 0 0 0;
+  text-align: center;
+}
+aside h2 {
+  text-align: left;
+  padding: 0;
+}
+.intro p {
   padding: 0 0 0 1rem;
 }
 header, footer {
@@ -87,10 +81,10 @@ main {
   grid-column: 1 / span 9;
 }
 aside {
-  grid-column: 1/ span 9;
+  grid-column: 1 / span 9;
 }
-/* use css grid to style the layout of the project and lab links */
-.projects ol{
+/* use css grid to style the layout of the project and lab link boxes */
+.projects ol {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -98,6 +92,7 @@ aside {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 }
 
 /* style overrides for wider screen layouts */
@@ -105,4 +100,5 @@ aside {
 aside {
   grid-column: 10 / span 3;
 }
+
 }
