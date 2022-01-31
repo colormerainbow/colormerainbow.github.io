@@ -45,7 +45,7 @@ ol {
   margin: 0rem;
   padding: .5rem;
 }
-ol h4 {
+.projects h4, .labs h4 {
   font-size: .8rem;
   font-style: italic;
 }
