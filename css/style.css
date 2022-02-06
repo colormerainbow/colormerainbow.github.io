@@ -1,55 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Quicksand:wght@400;600;700&display=swap');
+
 * {
-  box-sizing: border-box;
-}
-body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
   font-size: 1.2rem;
   font-family: 'Nunito Sans', sans-serif;
 }
+
 header,
 main,
 aside,
 footer {
   padding: 1rem;
 }
-header, footer {
+
+header {
   background: #555b6e;
   color: #bee3db;
   font-family: 'Quicksand', sans-serif;
 }
-main, .intro {
+
+main,
+.intro {
   background: #faf9f9;
   background-image: url(../images/hypnotize.png);
 }
+
 main {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
-.projects, .labs {
+
+.projects,
+.labs {
   background: #89b0ae;
   box-shadow: 0px 5px 5px #555b6e;
   padding-bottom: 15px;
+  margin: 1.5rem 0;
   border-radius: 15px;
 }
+
 aside {
   background: #ffd6ba;
 }
-h1, h2 {
+
+h1,
+h2 {
   text-align: center;
+  padding: .5rem 0 .5rem 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h3,
+.label {
+  font-family: 'Quicksand', sans-serif;
   padding: .5rem 0 0 0;
-  font-family: 'Quicksand', sans-serif;
 }
-h3 {
-  font-family: 'Quicksand', sans-serif;
+
+aside li {
+  margin: 0 0 0 2rem;
 }
-aside h4 {
-  font-family: 'Quicksand', sans-serif;
-}
+
 /* use flexbox to style the contents inside projects and labs boxes */
-.projects li, .labs li {
-  margin: 8px;
-  padding: 5px;
+.projects li,
+.labs li {
+  margin: 8px 10px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,76 +77,145 @@ aside h4 {
   box-shadow: 0px 5px 5px #555b6e;
   border-radius: 20px;
 }
+
 ol {
   list-style: none;
   margin: 0rem;
   padding: .5rem;
 }
-.projects h4, .labs h4 {
+
+.duedate {
   font-size: .8rem;
   font-style: italic;
   font-family: 'Quicksand', sans-serif;
+  padding-bottom: .5rem;
+}
+
+/* ----Format for the site footer  -----*/
+
+footer {
+  padding: 2rem 1rem;
+  background: #555b6e;
+  color: #bee3db;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.foot1 {
+  font-weight: bold;
+}
+
+.foot2 {
+  font-size: .95rem;
+}
+
+.email a {
+  color: #ffd6ba;
+  font-size: .85rem;
+}
+
+.disclaimer {
+  font-size: .85rem;
+  padding: 2rem 0 0 0;
 }
 
 /* end basic mobile-first styling */
 
+
 /* style overrides for medium screen layouts */
-@media screen and (min-width: 600px) {
-body {
-  font-size: 1rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-header, footer {
-  font-weight: 700;
-}
-h1, .intro h2 {
-  text-align: left;
-  padding: 0 0 0 1rem;
-}
-.projects h2, .labs h2 {
-  padding: 1rem 0 0 0;
-  text-align: center;
-}
-aside h2 {
-  text-align: left;
-  padding: 0;
-}
-.intro p {
-  padding: 0 0 0 1rem;
-}
-header, footer, main, aside {
-  grid-column: 1 / span 12;
-}
+@media screen and (min-width: 650px) {
+  body {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  header {
+    font-weight: 700;
+  }
+
+  h1,
+  .intro h2 {
+    text-align: left;
+    padding: 0 0 0 1rem;
+  }
+
+  .projects h2,
+  .labs h2 {
+    padding: 1rem 0 0 0;
+    text-align: center;
+  }
+
+  aside h2 {
+    text-align: left;
+    padding: 0;
+  }
+
+  .intro p {
+    padding: 0 0 0 1rem;
+  }
+
+  header,
+  footer,
+  main,
+  aside {
+    grid-column: 1 / span 12;
+  }
+
+  /* OLD FOOTER edits
 .reference {
   display: flex;
   justify-content:space-around;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: .95rem;
 }
-.disclaimer {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* use css grid to style the layout of the project and lab link boxes */
-.projects ol {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.labs ol {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+*/
+  .site-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+  }
 
+  .disclaimer {
+    padding: 2.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .9rem;
+  }
+
+  /* use css grid to style the layout of the project and lab link boxes */
+  .projects ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .labs ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .label {
+    padding: 1rem 0 0 0;
+  }
 }
 
 /* style overrides for wider screen layouts */
 @media screen and (min-width: 900px) {
-main {
+  main {
     grid-column: 1 / span 9;
   }
-aside {
-  grid-column: 10 / span 3;
-}
 
+  aside {
+    grid-column: 10 / span 3;
+  }
 }
