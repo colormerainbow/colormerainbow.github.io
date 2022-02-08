@@ -80,6 +80,7 @@ body {
   25% {
     background-image: url(../images/randall-ruiz-LVnJlyfa7Zk-unsplash.jpg);
     background-size: cover;
+    background-position: center;
     opacity: 0;
     filter: blur(10px);
   }
