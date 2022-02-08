@@ -12,6 +12,16 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+body {
+  /*  background: rgb(33,69,31);
+          background: linear-gradient(0deg, rgb(35, 52, 53, 1) 0%, rgb(73, 156, 204, 1) 100%);
+  background: #555b6e;
+          background: linear-gradient(0deg, #555b6e 0%, #f9f9fa 100%);
+          background-size: cover; */
+  animation-name: fade-in-load;
+  animation-duration: 4s;
+}
+
 header,
 main,
 aside,
@@ -66,6 +76,25 @@ h3,
 
 aside li {
   margin: 0 0 0 2rem;
+}
+
+@keyframes fade-in-load {
+
+  0%,
+  25% {
+    background-image: url(../images/randall-ruiz-LVnJlyfa7Zk-unsplash.jpg);
+    background-size: cover;
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    filter: blur(0px);
+  }
 }
 
 /* use flexbox to style the contents inside projects and labs boxes */
@@ -207,10 +236,12 @@ footer {
   aside {
     grid-column: 10 / span 3;
   }
+
   .projects {
     animation-name: flip-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    animation-delay: 6s;
   }
 
   .labs {
@@ -218,6 +249,7 @@ footer {
     /* animation-name: flip-next; */
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-delay: 6s;
   }
 
   aside {
@@ -225,33 +257,39 @@ footer {
     /* animation-name: fade-in-last; */
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    animation-delay: 6s;
   }
 
   @keyframes flip-in {
-    0%   {
-            background-color:#bee3db; 
-            transform:translate(0,0) rotateY(0deg) rotateX(0deg);
-            opacity: 0;
+    0% {
+      background-color: #bee3db;
+      transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
+      opacity: 0;
     }
-    25%  {
-            background-color:#555b6e; 
-            transform:translate(200px,0) rotateY(180deg) rotateX(180deg);
+
+    25% {
+      background-color: #555b6e;
+      transform: translate(200px, 0) rotateY(180deg) rotateX(180deg);
     }
-    50%  {
-            background-color:#faf9f9; 
-            transform:translate(200px,200px) rotateY(0deg) rotateX(0deg);
+
+    50% {
+      background-color: #faf9f9;
+      transform: translate(200px, 200px) rotateY(0deg) rotateX(0deg);
     }
-    75%  {
-            background-color:#ffd6ba; 
-            transform:translate(0,200px) rotateY(180deg) rotateX(180deg);
+
+    75% {
+      background-color: #ffd6ba;
+      transform: translate(0, 200px) rotateY(180deg) rotateX(180deg);
     }
+
     100% {
-            background-color:#89b0ae; 
-            transform:translate(0,0) rotateY(0deg) rotateX(0deg);
-            opacity: 1;
+      background-color: #89b0ae;
+      transform: translate(0, 0) rotateY(0deg) rotateX(0deg);
+      opacity: 1;
     }
-          }
   }
+}
+
 /*
   @keyframes flip-next {
     0%, 50%   {
@@ -315,25 +353,31 @@ footer {
 */
 
 @keyframes fade-in {
-  0%, 50% {
-  opacity: 0;
-}
-100% {
-  transform: rotate(-3600deg);
-  transform-origin: 20% 40%;
-  filter: blur(0);
-}
+
+  0%,
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-3600deg);
+    transform-origin: 20% 40%;
+    filter: blur(0);
+  }
 
 }
+
 @keyframes spin-in {
-  0%, 66% {
-  opacity: 0;
-}
-100% {
-  transform: rotate(7200deg);
-  transform-origin: 20% 40%;
-  filter: blur(0);
-}
+
+  0%,
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(7200deg);
+    transform-origin: 20% 40%;
+    filter: blur(0);
+  }
 
 }
-
