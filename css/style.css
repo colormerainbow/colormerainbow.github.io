@@ -12,16 +12,6 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-body {
-  /*  background: rgb(33,69,31);
-          background: linear-gradient(0deg, rgb(35, 52, 53, 1) 0%, rgb(73, 156, 204, 1) 100%);
-  background: #555b6e;
-          background: linear-gradient(0deg, #555b6e 0%, #f9f9fa 100%);
-          background-size: cover; */
-  animation-name: fade-in-load;
-  animation-duration: 4s;
-}
-
 header,
 main,
 aside,
@@ -76,6 +66,12 @@ h3,
 
 aside li {
   margin: 0 0 0 2rem;
+}
+
+/* Adding CSS Animation effects on page load */
+body {
+  animation-name: fade-in-load;
+  animation-duration: 3s;
 }
 
 @keyframes fade-in-load {
@@ -157,6 +153,16 @@ footer {
 
 /* end basic mobile-first styling */
 
+/* adding transition effects for responsive page */
+.projects h3,
+.labs h3 {
+  transition: all .5s ease-in-out;
+}
+
+.projects h3:hover,
+.labs h3:hover {
+  transform: scale(1.07) skewX(-20deg) translateX(15px);
+}
 
 /* style overrides for medium screen layouts */
 @media screen and (min-width: 650px) {
@@ -237,27 +243,28 @@ footer {
     grid-column: 10 / span 3;
   }
 
+  /* apply CSS Animations to the latter part of page load for large screen sizes only */
   .projects {
     animation-name: flip-in;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
-    animation-delay: 6s;
+    animation-delay: 2.5s;
   }
 
   .labs {
     animation-name: fade-in;
     /* animation-name: flip-next; */
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 6s;
+    animation-delay: 2.5s;
   }
 
   aside {
     animation-name: spin-in;
     /* animation-name: fade-in-last; */
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-delay: 6s;
+    animation-delay: 2.5s;
   }
 
   @keyframes flip-in {
